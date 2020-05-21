@@ -1,0 +1,100 @@
+# Gencriptor
+
+This is a packege that help you to encripty passwords and create password for your aplication with security, so in below you can see some methods that can use.
+
+- getstring_secur(size:int, special_caractere:bool);
+- encString(password:string);
+- decString(password:string);
+
+Exemple of getpassword();
+````php
+    require_once "__DIR__/gencriptor";
+    use elevenstack\Gencriptor\Gencriptor;
+
+    $pass = new Gencriptor();
+    $result = $pass->getstring_secur(8, false);
+
+    echo $result; 
+    //G1JCOT7V
+````
+
+if you want a method that can undo the security, in first you have use this method 'encString()' to return a password encrypeted and for decrypt the returned password by encString() you have use 'decString()', so thus verifications can be do.
+
+Example of encString(); and decString();
+
+````php
+    require_once "__DIR__/gencriptor";
+    use elevenstack\Gencriptor\Gencriptor;
+
+    $pass = new Gencriptor();
+    $crypted = $pass->encString('anypass');
+    echo $crypted;
+    //HG4N32TC2MGCFWJYHG4N286P286P
+
+    $descrypted = $pass->decString('HG4N32TC2MGCFWJYHG4N286P286P');
+    echo $descrypted;
+    //anypass
+````
+
+Example of verification using encpass and decpass: 
+
+````php
+    require_once "__DIR__/gencriptor";
+    use elevenstack\Gencriptor\Gencriptor;
+
+    $pass = new Gencriptor();
+    $crypted = $pass->encString('pass');
+    echo $crypted; //FWJYHG4N286P286P
+
+    $descrypted = $pass->decString('FWJYHG4N286P286P');
+
+    if($descrypted == 'pass'){
+        echo "Open access";
+    }else{
+        echo "Error try again";
+    }
+````
+
+## Installation using composer
+
+in cli:
+````
+$ composer elevenstack/Gencriptor
+````
+
+composer.json file:
+
+````json
+    "elevenstack\Gencriptor": "^1.0"
+````
+
+## Requirements
+
+The package is suported by this versions:
+
+- PHP >= 7.2
+
+## Author
+
+This pakcage was created and is maintained by Guilherme-j10. if you have any questions can contact me by my e-mail guilherme123.campos12@gmail.com.
+
+## License
+
+MIT License
+
+Copyright (c) 2019 Johnny Mast
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+
+
+
+
+
+

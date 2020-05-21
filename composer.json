@@ -1,0 +1,28 @@
+{
+    "name": "elevenstack/gencriptor",
+    "description": "This is a packege that help you whit the security of your password in your aplication or in a system",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "type": "library",
+    "keywords": [
+        "ElevenStack",
+        "Gencriptor",
+        "security",
+        "crypto"
+    ],
+    "authors": [
+        {
+            "name": "Guilherme-j10",
+            "email": "guilhermeZA.123123@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "elevenstack\\Gencriptor": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2"
+    }
+}
