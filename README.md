@@ -2,7 +2,7 @@
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/elevenstack/gencriptor?style=flat-square)
 ![Packagist License](https://img.shields.io/packagist/l/elevenstack/gencriptor?color=gra&style=flat-square)
 ![Packagist Version](https://img.shields.io/packagist/v/elevenstack/gencriptor?style=flat-square)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Guilherme-j10/Gencriptor/badges/quality-score.png?style=flat-square)](https://scrutinizer-ci.com/g/Guilherme-j10/Gencriptor/style=flat-square)
+![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/Guilherme-j10/Gencriptor/master?style=flat-square)
 [![GitHub stars](https://img.shields.io/github/stars/Guilherme-j10/Gencriptor?style=flat-square)](https://github.com/Guilherme-j10/Gencriptor/stargazers?style=for-the-badge)
 
 This is a packege that help you to encripty passwords and create password for your aplication with security, so in below you can see some methods that can use.
