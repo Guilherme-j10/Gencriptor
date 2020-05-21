@@ -15,6 +15,8 @@ composer.json file:
     "elevenstack/Gencriptor": "^1.0"
 ````
 
+## How use
+
 - getstring_secur(size:int, special_caractere:bool);
 - encString(password:string);
 - decString(password:string);
