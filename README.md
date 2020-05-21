@@ -1,5 +1,6 @@
 # Gencriptor
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/elevenstack/gencriptor)
+![Packagist License](https://img.shields.io/packagist/l/elevenstack/gencriptor)
 
 This is a packege that help you to encripty passwords and create password for your aplication with security, so in below you can see some methods that can use.
 
