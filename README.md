@@ -1,9 +1,9 @@
 # Gencriptor
-![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/elevenstack/gencriptor)
-![Packagist License](https://img.shields.io/packagist/l/elevenstack/gencriptor?color=gra)
-![Packagist Version](https://img.shields.io/packagist/v/elevenstack/gencriptor)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Guilherme-j10/Gencriptor/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Guilherme-j10/Gencriptor/?branch=master)
-[![GitHub stars](https://img.shields.io/github/stars/Guilherme-j10/Gencriptor)](https://github.com/Guilherme-j10/Gencriptor/stargazers)
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/elevenstack/gencriptor?style=for-the-badge)
+![Packagist License](https://img.shields.io/packagist/l/elevenstack/gencriptor?color=gra?style=for-the-badge)
+![Packagist Version](https://img.shields.io/packagist/v/elevenstack/gencriptor?style=for-the-badge)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Guilherme-j10/Gencriptor/badges/quality-score.png?b=master?style=for-the-badge)](https://scrutinizer-ci.com/g/Guilherme-j10/Gencriptor/?branch=master)
+[![GitHub stars](https://img.shields.io/github/stars/Guilherme-j10/Gencriptor)](https://github.com/Guilherme-j10/Gencriptor/stargazers?style=for-the-badge)
 
 This is a packege that help you to encripty passwords and create password for your aplication with security, so in below you can see some methods that can use.
 
