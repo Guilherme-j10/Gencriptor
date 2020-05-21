@@ -19,7 +19,7 @@
     ],
     "autoload":{
         "psr-4":{
-            "elevenstack\\Gencriptor": "src/"
+            "elevenstack\\Gencriptor\\": "src/"
         }
     },
     "require": {
