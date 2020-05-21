@@ -2,13 +2,26 @@
 
 This is a packege that help you to encripty passwords and create password for your aplication with security, so in below you can see some methods that can use.
 
+## Installation using composer
+
+in cli:
+````
+$ composer elevenstack/Gencriptor
+````
+
+composer.json file:
+
+````json
+    "elevenstack/Gencriptor": "^1.0"
+````
+
 - getstring_secur(size:int, special_caractere:bool);
 - encString(password:string);
 - decString(password:string);
 
 Exemple of getpassword();
 ````php
-    require_once "__DIR__/gencriptor";
+    require_once __DIR__."venodr/autoload.php";
     use elevenstack\Gencriptor\Gencriptor;
 
     $pass = new Gencriptor();
@@ -23,15 +36,15 @@ if you want a method that can undo the security, in first you have use this meth
 Example of encString(); and decString();
 
 ````php
-    require_once "__DIR__/gencriptor";
+    require_once __DIR__."venodr/autoload.php";
     use elevenstack\Gencriptor\Gencriptor;
 
     $pass = new Gencriptor();
     $crypted = $pass->encString('anypass');
     echo $crypted;
-    //HG4N32TC2MGCFWJYHG4N286P286P
+    //LWVPdi1lT3Z4NEc4JVQ/SDRYa0xuRTNDeDRHOA
 
-    $descrypted = $pass->decString('HG4N32TC2MGCFWJYHG4N286P286P');
+    $descrypted = $pass->decString('LWVPdi1lT3Z4NEc4JVQ/SDRYa0xuRTNDeDRHOA');
     echo $descrypted;
     //anypass
 ````
@@ -39,33 +52,20 @@ Example of encString(); and decString();
 Example of verification using encpass and decpass: 
 
 ````php
-    require_once "__DIR__/gencriptor";
+    require_once __DIR__."venodr/autoload.php";
     use elevenstack\Gencriptor\Gencriptor;
 
     $pass = new Gencriptor();
     $crypted = $pass->encString('pass');
-    echo $crypted; //FWJYHG4N286P286P
+    echo $crypted; //LWVPdi1lT3Z4NEc4JVQ/SA
 
-    $descrypted = $pass->decString('FWJYHG4N286P286P');
+    $descrypted = $pass->decString('LWVPdi1lT3Z4NEc4JVQ/SA');
 
     if($descrypted == 'pass'){
         echo "Open access";
     }else{
         echo "Error try again";
     }
-````
-
-## Installation using composer
-
-in cli:
-````
-$ composer elevenstack/Gencriptor
-````
-
-composer.json file:
-
-````json
-    "elevenstack/Gencriptor": "^1.0"
 ````
 
 ## Requirements
