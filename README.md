@@ -65,7 +65,7 @@ $ composer elevenstack/Gencriptor
 composer.json file:
 
 ````json
-    "elevenstack\Gencriptor": "^1.0"
+    "elevenstack/Gencriptor": "^1.0"
 ````
 
 ## Requirements
