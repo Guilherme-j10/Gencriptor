@@ -1,6 +1,6 @@
 # Gencriptor
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/elevenstack/gencriptor?style=flat-square)
-![Packagist License](https://img.shields.io/packagist/l/elevenstack/gencriptor?color=gra?style=flat-square)
+![Packagist License](https://img.shields.io/packagist/l/elevenstack/gencriptor?style=flat-square?color=gra)
 ![Packagist Version](https://img.shields.io/packagist/v/elevenstack/gencriptor?style=flat-square)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Guilherme-j10/Gencriptor?style=for-the-badge/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Guilherme-j10/Gencriptor/?branch=master)
 [![GitHub stars](https://img.shields.io/github/stars/Guilherme-j10/Gencriptor)](https://github.com/Guilherme-j10/Gencriptor/stargazers?style=for-the-badge)
