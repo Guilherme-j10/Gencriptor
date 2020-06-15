@@ -12,13 +12,15 @@ This is a packege that help you to encripty passwords and create password for yo
 
 in cli:
 ````
-$ composer elevenstack/Gencriptor
+$ composer require elevenstack/Gencriptor
 ````
 
 composer.json file:
 
 ````json
+"require":{
     "elevenstack/Gencriptor": "^1.0"
+}
 ````
 
 ## How to use
