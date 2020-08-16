@@ -17,18 +17,20 @@
 		*
 		* @param string $string texto/string a ser encriptada
 		*/
-		public function encString(string $string)
+		public function encString(string $string): String
 		{
-			$result = '';
+			$arr_string = preg_split("/(?<!^)(?!$)/u", $string);
+			$output = '';
 
-			$letter = array_flip(self::matriz_encript);
-			foreach (str_split(strtolower($string)) as $key) {
-				if (isset($letter[$key])) {
-					$result .= $letter[$key];
-				}
+			for($i = 0; $i < count($arr_string); $i++){
+				foreach($this->simple_matriz[$this->key] as $chave => $value){
+                    if($value === $arr_string[$i]){
+                        $output .= $chave;
+                    }
+                }
 			}
 
-			return $this->secur_hash($result, true);
+			return $this->secur_hash($output, true);
 		}
 
 		/**
@@ -37,7 +39,8 @@
 		 * @param string $hash encrypted string
 		 * @param bool $add_secur add or remove security
 		*/
-		private function secur_hash(string $hash, bool $add_secur){
+		private function secur_hash(string $hash, bool $add_secur): String
+		{
 			switch ($add_secur) {
 				case true:
 					$str = str_split($hash);
@@ -61,46 +64,45 @@
 		 * 
 		 * @param string $string texto/string a ser descriptada
 		*/
-		public function decString(string $string)
+		public function decString(string $string): String
 		{
-			$content = $this->secur_hash($string, false);
-			$string = str_split($content);
+			$string = preg_split("/(?<!^)(?!$)/u", $string);
 
-			$valor_index = count($string) / 4;
-			$result = "";
-			$a = 0;
+            $index_value = count($string) / 4;
+            $a = 0;
+            $output = '';
 
-			do {
-				$indice = 4 * $a;
+            do {
+                
+                $index = 4 * $a;
 
-				if ($indice == 4) {
-					$indice = 0;
-				} elseif ($indice > 4) {
-					$indice = $indice - 4;
-				}
+                if($index == 4){
+                    $index = 0;
+                }elseif($index > 4){
+                    $index = $index - 4;
+                }
 
-				for ($i = $indice; $i < 4 * $a; $i++) {
-					$result .= $string[$i];
-				}
+                for($i = $index; $i < 4 * $a; $i++){
+                    $output .= $string[$i];
+                }
 
-				$result = $result . " ";
+                $output = $output.' ';
 
-				$a++;
-			} while ($a <= $valor_index);
+                $a++;
+            } while ($a <= $index_value);
 
-			$trate_string = trim($result);
-			$result_string = "";
+            $final_result = '';
+            $explode_code = explode(' ', $output);
 
-			foreach (explode(" ", $trate_string) as $key => $value) {
-				if ($value === "&zsf") {
-					$result_string .= '0';
-				}
-				if (self::matriz_encript[$value]) {
-					$result_string .= self::matriz_encript[$value];
-				}
-			}
+            for($j = 0; $j < count($explode_code); $j++){
+                foreach($this->simple_matriz[$this->key] as $chave => $valor){
+                    if($chave === $explode_code[$j]){
+                        $final_result .= $valor;
+                    }
+                }
+            }
 
-			return trim($result_string);
+            return trim($final_result);
 		}
 
 		/**
@@ -109,7 +111,7 @@
 		 * @param int $size specifies the quantity to be returned
 		 * @param bool $special_caractere whether it will contain special characters or not
 		*/
-		public function getstring_secur(int $size, bool $special_caractere)
+		public function getstring_secur(int $size, bool $special_caractere): String
 		{
 			if (is_string($size)) {
 				echo "Please put a number how paramenter, not string ";
@@ -137,7 +139,7 @@
 		 * 
 		 * @param bool $special_caractere defines whether it contains special characters or not
 		*/
-		public function getstringhash(bool $special_caractere)
+		public function getstringhash(bool $special_caractere): String
 		{
 			switch ($special_caractere) {
 				case true:
