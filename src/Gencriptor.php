@@ -23,7 +23,7 @@
 			$output = '';
 
 			for($i = 0; $i < count($arr_string); $i++){
-				foreach($this->simple_matriz[$this->key] as $chave => $value){
+				foreach(self::matriz_encript as $chave => $value){
                     if($value === $arr_string[$i]){
                         $output .= $chave;
                     }
@@ -66,7 +66,8 @@
 		*/
 		public function decString(string $string): String
 		{
-			$string = preg_split("/(?<!^)(?!$)/u", $string);
+			$securiti = $this->secur_hash($string, false);
+			$string = preg_split("/(?<!^)(?!$)/u", $securiti);
 
             $index_value = count($string) / 4;
             $a = 0;
@@ -95,7 +96,7 @@
             $explode_code = explode(' ', $output);
 
             for($j = 0; $j < count($explode_code); $j++){
-                foreach($this->simple_matriz[$this->key] as $chave => $valor){
+                foreach(self::matriz_encript as $chave => $valor){
                     if($chave === $explode_code[$j]){
                         $final_result .= $valor;
                     }
